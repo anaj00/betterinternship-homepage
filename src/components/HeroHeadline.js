@@ -2,7 +2,7 @@ export default function HeroHeadline() {
   return (
     <>
       {/* Mobile */}
-      <h1 className="block sm:hidden text-3xl font-bold text-white px-6 py-3 rounded-full bg-primary text-center shadow-[0_0_20px_rgba(221,100,184,0.4)]">
+      <h1 className="block sm:hidden text-xl font-bold text-white px-6 py-3 rounded-full bg-primary text-center shadow-[0_0_20px_rgba(221,100,184,0.4)] whitespace-nowrap">
         Land an internship
       </h1>
 

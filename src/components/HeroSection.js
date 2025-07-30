@@ -15,21 +15,27 @@ export default function HeroSection() {
         <HeroIllustration />
         <div className="relative">
           <HeroHeadline />
-          <div className="absolute right-[-60px] -top-[-110px]">
+          <div
+            className="absolute
+              right-4 top-[2.7rem]   /* default for desktop */
+              sm:right-6 sm:top-[-2.5rem]
+              md:right-12 md:top-[-3rem]
+              lg:right-[-60px] lg:top-[110px]"
+          >
             <HeroTag />
           </div>
         </div>
 
-        <div className="mt-32 gap-8 space-y-5">
+        {/* <div className="mt-32 gap-8 space-y-5">
           <div className="text-gray-500 text-xl">
             One profile. One click. We handle the rest.
           </div>
           <HeroSearch />
           <HeroCompanies />
-        </div>
+        </div> */}
 
         {/* Scroll Down Indicator */}
-        <div className="mt-20 animate-bounce text-gray-400">
+        {/* <div className="mt-20 animate-bounce text-gray-400">
           <svg
             className="w-6 h-6"
             fill="none"
@@ -43,7 +49,7 @@ export default function HeroSection() {
               d="M19 9l-7 7-7-7"
             />
           </svg>
-        </div>
+        </div> */}
       </section>
     </div>
   );
