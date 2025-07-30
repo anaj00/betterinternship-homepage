@@ -10,7 +10,7 @@ export default function Home() {
     <div className="min-h-screen grid place-items-center p-8 pb-20 gap-16 sm:p-20">
       <main className="w-full flex flex-col items-center gap-8 mt-20">
         <HeroSection />
-        <JobCardCarousel />
+        {/* <JobCardCarousel />
 
         <div className="w-full mt-30">
           <div className="flex flex-col md:flex-row gap-10 items-center justify-center w-full">
@@ -21,7 +21,7 @@ export default function Home() {
               <Testimonies />
             </div>
           </div>
-        </div>
+        </div> */}
       </main>
 
       {/* <footer className="">
