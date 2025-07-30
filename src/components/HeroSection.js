@@ -26,13 +26,13 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="mt-16 sm:mt-24 md:mt-32 space-y-5">
+        <div className="mt-16 sm:mt-24 md:mt-32 space-y-5 w-full sm:w-[36rem] md:w-3xl mx-auto px-4 sm:px-0">
           <div className="text-gray-500 text-base sm:text-lg md:text-xl text-center px-4 sm:px-0">
             One profile. One click. We handle the rest.
           </div>
 
-          {/* <HeroSearch />
-          <HeroCompanies /> */}
+          <HeroSearch />
+          {/* <HeroCompanies /> */}
         </div>
 
         {/* Scroll Down Indicator */}

@@ -58,7 +58,7 @@ export default function HeroSearch() {
       {/* Button */}
       <button
         type="submit"
-        className="bg-[var(--color-green)] text-white font-semibold px-6 py-3 rounded-xl hover:brightness-105 active:scale-95 transition-all shadow-sm min-w-[110px]"
+        className="w-full sm:w-auto bg-[var(--color-green)] text-white font-semibold px-6 py-3 rounded-xl hover:brightness-105 active:scale-95 transition-all shadow-sm min-w-[110px]"
       >
         Let’s go
       </button>
