@@ -20,9 +20,9 @@ export default function Home() {
             </div>
 
             {/* Testimonies Section */}
-            {/* <div className="w-full md:w-auto relative">
+            <div className="w-full md:w-auto relative">
               <Testimonies />
-            </div> */}
+            </div>
           </div>
         </div>
       </main>

@@ -27,37 +27,59 @@ const testimonials = [
 
 export default function Testimonies() {
   return (
-    <div className="relative w-full h-[420px] flex justify-center items-center">
-      <CardSwap
-        cardDistance={60}
-        verticalDistance={70}
-        delay={6000}
-        pauseOnHover={true}
-        className="w-full max-w-2xl"
-      >
+    <>
+      {/* Mobile: Simple stacked cards */}
+      <div className="sm:hidden px-4 py-8 space-y-6">
         {testimonials.map((t, i) => (
-          <Card
+          <div
             key={i}
-            avatar={t.avatar}
-            customClass="bg-white text-gray-800 border border-gray-300"
-            header={
-              <div className="flex flex-col gap-1">
-                <h3 className="text-lg font-semibold text-pink-600 dark:text-pink-400">
-                  {t.name}
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {t.role}
-                </p>
-              </div>
-            }
-            content={
-              <p className="text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                “{t.quote}”
-              </p>
-            }
-          />
+            className="bg-white border border-gray-300 rounded-xl shadow p-6 text-center"
+          >
+            <img
+              src={t.avatar}
+              alt={`${t.name} avatar`}
+              className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h3 className="text-pink-600 font-semibold text-base">{t.name}</h3>
+            <p className="text-sm text-gray-500">{t.role}</p>
+            <p className="mt-4 text-gray-700 text-sm">“{t.quote}”</p>
+          </div>
         ))}
-      </CardSwap>
-    </div>
+      </div>
+
+      {/* Desktop: CardSwap animation */}
+      <div className="hidden sm:flex relative w-full h-[480px] justify-center items-center">
+        <CardSwap
+          cardDistance={40}
+          verticalDistance={50}
+          delay={4000}
+          pauseOnHover={true}
+          className="w-full max-w-xl md:max-w-2xl"
+        >
+          {testimonials.map((t, i) => (
+            <Card
+              key={i}
+              avatar={t.avatar}
+              customClass="bg-white text-gray-800 border border-gray-300"
+              header={
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-xl font-semibold text-pink-600 dark:text-pink-400">
+                    {t.name}
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    {t.role}
+                  </p>
+                </div>
+              }
+              content={
+                <p className="text-base text-gray-700 dark:text-gray-200 leading-relaxed">
+                  “{t.quote}”
+                </p>
+              }
+            />
+          ))}
+        </CardSwap>
+      </div>
+    </>
   );
 }
