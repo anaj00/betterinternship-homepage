@@ -15,7 +15,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="flex flex-col mt-32 gap-8">
+      <div className="mt-32 gap-8">
         <HeroSearch />
         <HeroCompanies />
       </div>
