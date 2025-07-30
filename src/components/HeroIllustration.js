@@ -1,4 +1,4 @@
-import { Image } from "next/image";
+import Image from "next/image";
 
 export default function HeroIllustration() {
   const images = [
@@ -11,7 +11,7 @@ export default function HeroIllustration() {
   return (
     <div className="relative flex justify-center items-center gap-4 flex-wrap max-w-3xl w-full">
       {images.map((img, index) => (
-        <Image
+        <img
           key={index}
           src={img.src}
           alt={img.alt}

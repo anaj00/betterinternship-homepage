@@ -2,7 +2,6 @@ import HeroSection from "@/components/HeroSection";
 import JobCardCarousel from "@/components/JobCardCarousel";
 import Newsletter from "@/components/Newsletter";
 import Testimonies from "@/components/Testimonies";
-import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -28,10 +27,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      {/* <footer className="">
-        <Footer />
-      </footer> */}
     </div>
   );
 }

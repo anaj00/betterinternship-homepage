@@ -2,8 +2,8 @@ import './globals.css';
 import { Providers } from './providers';
 
 import { HeroNavbar } from "@/components/HeroNavbar";
-import { Image } from "next/image";
-import { Link } from "next/link";
+import Image from "next/image";
+import  Link  from "next/link";
 
 export const metadata = {
   title: "BetterInternship",
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
               {/* Brand Info */}
               <div className="flex flex-col gap-4 max-w-md">
                 <div className="flex items-center gap-3">
-                  <Image
+                  <img
                     src="/logo-only.png"
                     alt="BetterInternship Logo"
                     className="w-10 h-10"

@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
-import { Image } from "next/image";
+import Image from "next/image";
 
 const jobCards = [
   {
@@ -58,7 +58,7 @@ function JobCard({ card }) {
         </div>
       )}
 
-      <Image
+      <img
         src={card.logo}
         alt={`${card.company} logo`}
         className="w-20 h-20 object-contain mb-4"
