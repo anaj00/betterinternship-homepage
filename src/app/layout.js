@@ -2,6 +2,8 @@ import './globals.css';
 import { Providers } from './providers';
 
 import { HeroNavbar } from "@/components/HeroNavbar";
+import { Image } from "next/image";
+import { Link } from "next/link";
 
 export const metadata = {
   title: "BetterInternship",
@@ -27,7 +29,7 @@ export default function RootLayout({ children }) {
               {/* Brand Info */}
               <div className="flex flex-col gap-4 max-w-md">
                 <div className="flex items-center gap-3">
-                  <img
+                  <Image
                     src="/logo-only.png"
                     alt="BetterInternship Logo"
                     className="w-10 h-10"
@@ -44,18 +46,18 @@ export default function RootLayout({ children }) {
               {/* Navigation Links */}
               <div className="flex flex-col gap-4 text-sm">
                 <span className="font-semibold text-gray-700">Navigation</span>
-                <a href="/" className="hover:underline">
+                <Link href="/" className="hover:underline">
                   Home
-                </a>
-                <a href="/jobs" className="hover:underline">
+                </Link>
+                <Link href="/jobs" className="hover:underline">
                   Job Board
-                </a>
-                <a href="/about" className="hover:underline">
+                </Link>
+                <Link href="/about" className="hover:underline">
                   About Us
-                </a>
-                <a href="/contact" className="hover:underline">
+                </Link>
+                <Link href="/contact" className="hover:underline">
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
 

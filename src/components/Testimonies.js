@@ -1,5 +1,6 @@
 "use client";
 import CardSwap, { Card } from "@/blocks/Components/CardSwap/CardSwap";
+import { Image } from "next/image";
 
 const testimonials = [
   {
@@ -35,7 +36,7 @@ export default function Testimonies() {
             key={i}
             className="bg-white border border-gray-300 rounded-xl shadow p-6 text-center"
           >
-            <img
+            <Image
               src={t.avatar}
               alt={`${t.name} avatar`}
               className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"

@@ -1,5 +1,8 @@
 "use client"
 
+import { Image } from "next/image";
+import { Link } from "next/link";
+
 export default function HeroFooter() {
   return (
     <footer className="w-full bg-primary text-white px-6 py-10 sm:px-12">
@@ -7,7 +10,7 @@ export default function HeroFooter() {
         {/* Brand Info */}
         <div className="flex flex-col gap-3 max-w-sm">
           <div className="flex items-center gap-3">
-            <img
+            <Image
               src="/logo-only.png"
               alt="BetterInternship Logo"
               className="w-10 h-10"
@@ -24,18 +27,18 @@ export default function HeroFooter() {
         {/* Links */}
         <div className="flex flex-col gap-4 text-sm">
           <span className="font-semibold text-white">Navigation</span>
-          <a href="/" className="hover:underline">
+          <Link href="/" className="hover:underline">
             Home
-          </a>
-          <a href="/jobs" className="hover:underline">
+          </Link>
+          <Link href="/jobs" className="hover:underline">
             Job Board
-          </a>
-          <a href="/about" className="hover:underline">
+          </Link>
+          <Link href="/about" className="hover:underline">
             About Us
-          </a>
-          <a href="/contact" className="hover:underline">
+          </Link>
+          <Link href="/contact" className="hover:underline">
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* Socials */}
