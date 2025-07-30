@@ -2,7 +2,7 @@ export default function Newsletter() {
   return (
     <div className="w-full p-12 backdrop-blur-md rounded-2xl text-white bg-primary transition-shadow duration-300 shadow-[0_0_30px_var(--color-primary)]">
       <h2 className="text-5xl font-bold text-white mb-2">
-        Stay ahead in your internship hunt
+        Stay ahead of your internship hunt
       </h2>
       <p className="text-white mb-6 ">
         Subscribe to our newsletter for the latest internship openings, career

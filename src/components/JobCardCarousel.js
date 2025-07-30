@@ -96,7 +96,7 @@ const tagColors = ["bg-pink", "bg-blue", "bg-green"];
 export default function JobCardCarousel() {
   return (
     <section className="py-16">
-      <div className="rounded-[3rem] border border-gray-300 p-10 sm:p-12">
+      <div className="rounded-[3rem] border border-gray-300 p-10 sm:p-12 w-full p-12 backdrop-blur-md rounded-2xl transition-shadow duration-300 shadow-[0_0_30px_var(--color-primary)]">
         <div className="text-center text-[2.2rem] sm:text-[3rem] font-bold mb-12 text-gray-700 drop-shadow-sm">
           Apply fast, <span className="text-primary">Get hired faster.</span>
         </div>
@@ -119,7 +119,7 @@ export default function JobCardCarousel() {
         >
           {jobCards.map((card, index) => (
             <SwiperSlide key={index} className="!w-auto py-5">
-              <div className="w-full max-w-sm backdrop-blur-md rounded-3xl p-10 border border-gray-200 shadow-md transition duration-300 hover:shadow-xl">
+              <div className="w-full max-w-sm backdrop-blur-md rounded-3xl p-10 transition duration-300 hover:shadow-xl bg-white text-gray-800 border border-gray-300">
                 <img
                   src={card.logo}
                   alt={`${card.company} logo`}
@@ -157,7 +157,7 @@ export default function JobCardCarousel() {
         </Swiper>
 
         <div className="mt-10 flex justify-center">
-          <button className="text-gray-700 text-sm font-medium border border border-gray-300 px-6 py-2 rounded-full hover:bg-black hover:text-white transition">
+          <button className="text-gray-300 text-sm font-medium border border border-gray-300 px-6 py-2 rounded-full hover:bg-black hover:text-white transition">
             Show More
           </button>
         </div>
