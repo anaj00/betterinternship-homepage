@@ -12,12 +12,12 @@ export default function Home() {
         <HeroSection />
         <JobCardCarousel />
 
-        <div className="w-full bg-gradient-to-r from-[var(--color-pink)] to-white rounded-[3rem] p-10 relative overflow-hidden">
-          <div className="flex flex-col md:flex-row gap-6 items-center justify-between w-full">
-            <div className="flex-1">
+        <div className="w-full mt-30">
+          <div className="flex flex-col md:flex-row gap-10 items-center justify-center w-full">
+            <div className="">
               <Newsletter />
             </div>
-            <div className="flex-1 relative">
+            <div className="relative">
               <Testimonies />
             </div>
           </div>

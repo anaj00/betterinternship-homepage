@@ -1,10 +1,10 @@
 export default function Newsletter() {
   return (
-    <div className="max-w-md w-full p-6 bg-white/80 backdrop-blur-md rounded-2xl shadow-md">
-      <h2 className="text-3xl font-bold text-black mb-2">
-        Transforming the Way you Find Jobs
+    <div className="w-full p-12  backdrop-blur-md rounded-2xl shadow-md">
+      <h2 className="text-5xl font-bold text-gray-700 mb-2">
+        Transforming the way you find internships
       </h2>
-      <p className="text-gray-700 mb-6">
+      <p className="text-gray-700 mb-6 ">
         Stop searching, start discovering. Let the ideal job come to you.
       </p>
 

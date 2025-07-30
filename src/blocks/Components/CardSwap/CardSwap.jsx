@@ -14,35 +14,51 @@ import React, {
 } from "react";
 import gsap from "gsap";
 
-export const Card = forwardRef(({ customClass, children, ...rest }, ref) => (
-  <div
-    ref={ref}
-    {...rest}
-    className={`absolute top-1/2 left-1/2 rounded-xl bg-white text-black shadow-xl [transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] overflow-hidden ${
-      customClass ?? ""
-    } ${rest.className ?? ""}`.trim()}
-  >
-    {/* Header section */}
-    <div className="bg-white p-4 rounded-t-xl">
-      {children?.props?.header ?? (
-        <h3 className="text-pink-600 font-semibold text-sm">Job Title</h3>
-      )}
-      <p className="text-xs text-gray-500">
-        {children?.props?.location ?? "Remote"}
-      </p>
-    </div>
 
-    {/* Content section */}
-    <div className="bg-black text-white p-4 h-full">
-      {children?.props?.content ?? (
-        <>
-          <p className="text-sm font-medium">San Francisco, California</p>
-          <p className="text-green-500 font-bold text-sm">$134K/year</p>
-        </>
-      )}
+export const Card = forwardRef(
+  ({ customClass, header, content, avatar, children, ...rest }, ref) => (
+    <div
+      ref={ref}
+      {...rest}
+      className={`absolute top-1/2 left-1/2 rounded-xl shadow-xl bg-white text-gray-800 dark:bg-[#1d1d1f] dark:text-gray-100 overflow-hidden [transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] ${
+        customClass ?? ""
+      } ${rest.className ?? ""}`.trim()}
+    >
+      {/* Header */}
+      <div className="flex flex-col items-center text-center p-10 border-b border-gray-100 dark:border-gray-700">
+        <img
+          src={avatar ?? "/avatars/default.png"}
+          alt="Avatar"
+          className="w-24 h-24 rounded-full object-cover border border-gray-300 dark:border-gray-600 mb-4"
+        />
+        {header ?? (
+          <>
+            <h3 className="text-xl font-semibold text-pink-600 dark:text-pink-400">
+              Anonymous
+            </h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Intern</p>
+          </>
+        )}
+      </div>
+
+      {/* Content */}
+      <div className="p-6 pt-4 text-center">
+        {content ?? (
+          <p className="text-base text-gray-700 dark:text-gray-200 leading-relaxed">
+            “This internship changed my career path completely. The team was
+            supportive, and I gained so much real-world experience.”
+          </p>
+        )}
+      </div>
     </div>
-  </div>
-));
+  )
+);
+
+Card.displayName = "Card";
+
+
+Card.displayName = "Card";
+
 
 Card.displayName = "Card";
 
