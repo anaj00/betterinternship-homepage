@@ -6,7 +6,7 @@ import HeroCompanies from "./HeroCompanies";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col items-center text-center">
+    <section className="min-h-[calc(100vh-200px)] flex flex-col items-center text-center">
       <HeroIllustration />
       <div className="relative">
         <HeroHeadline />
