@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0)_0%,_white_100%)]" />
 
       {/* Content */}
-      <section className="min-h-[calc(100vh-200px)] flex flex-col items-center text-center relative z-10">
+      <section className="min-h-[calc(100vh-200px)] flex flex-col items-center text-center relative z-10 mt-8">
         <HeroIllustration />
         <div className="relative">
           <HeroHeadline />
@@ -24,11 +24,24 @@ export default function HeroSection() {
           <HeroSearch />
           <HeroCompanies />
         </div>
+
+        {/* ↓ Scroll Down Indicator */}
+        <div className="mt-20 animate-bounce text-gray-400">
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </div>
       </section>
     </div>
   );
 }
-
-
-
-

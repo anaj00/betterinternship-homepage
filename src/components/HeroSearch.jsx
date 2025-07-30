@@ -1,14 +1,34 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
 export default function HeroSearch() {
+  const router = useRouter();
+  const [query, setQuery] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const trimmed = query.trim();
+    const url = trimmed
+      ? `https://www.betterinternship.com/search?q=${encodeURIComponent(
+          trimmed
+        )}`
+      : `https://www.betterinternship.com/search`;
+    window.open(url, "_blank");
+  };
+
   return (
-    <div className="flex flex-col sm:flex-row gap-4 items-center w-full">
-      {/* Search input with icon */}
-      <div className="relative w-full ">
+    <form
+      onSubmit={handleSearch}
+      className="flex flex-col sm:flex-row gap-4 items-center w-full"
+    >
+      {/* Input */}
+      <div className="relative w-full">
         <label htmlFor="search" className="sr-only">
-          Search
+          Search internships
         </label>
-        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
           <svg
             className="w-4 h-4 text-gray-500 dark:text-gray-400"
             aria-hidden="true"
@@ -25,23 +45,23 @@ export default function HeroSearch() {
             />
           </svg>
         </div>
-
         <input
           type="search"
           id="search"
-          className="block w-full p-4 pl-10 text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-[var(--color-green)] focus:border-[var(--color-green)] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[var(--color-green)] dark:focus:border-[var(--color-green)]"
-          placeholder="Search an internship"
-          required
+          className="block w-full py-3 pl-12 pr-4 text-base rounded-2xl border border-gray-300 bg-gray-50 shadow-sm focus:ring-[var(--color-green)] focus:border-[var(--color-green)] placeholder-gray-500"
+          placeholder="Try “UI/UX Designer”, “Remote internships”, or “Marketing”"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
         />
       </div>
 
-      {/* Search button outside */}
+      {/* Button */}
       <button
         type="submit"
-        className="text-white bg-[var(--color-green)] hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-2xl px-6 py-4 transition"
+        className="bg-[var(--color-green)] text-white font-semibold px-6 py-3 rounded-xl hover:brightness-105 active:scale-95 transition-all shadow-sm min-w-[110px]"
       >
-        Search
+        Let’s go
       </button>
-    </div>
+    </form>
   );
 }
