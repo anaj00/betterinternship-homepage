@@ -39,7 +39,7 @@ export default function Testimonies() {
           <Card
             key={i}
             avatar={t.avatar}
-            customClass="bg-white text-gray-800 dark:bg-[#1d1d1f] dark:text-gray-100"
+            customClass="bg-white text-gray-800 dark:bg-[#1d1d1f] border border-gray-300"
             header={
               <div className="flex flex-col gap-1">
                 <h3 className="text-lg font-semibold text-pink-600 dark:text-pink-400">

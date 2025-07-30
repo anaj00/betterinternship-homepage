@@ -78,7 +78,7 @@ export function LogoCarousel({ logos, columns = 4 }) {
   }, []);
 
   return (
-    <div className="w-full py-8 flex justify-center gap-6">
+    <div className="w-full flex justify-center gap-6">
       {logoColumns.map((col, i) => (
         <LogoColumn key={i} logos={col} columnIndex={i} currentTime={time} />
       ))}

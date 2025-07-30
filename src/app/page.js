@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="min-h-screen grid place-items-center p-8 pb-20 gap-16 sm:p-20">
-      <main className="w-full flex flex-col items-center gap-8">
+      <main className="w-full flex flex-col items-center gap-8 mt-20">
         <HeroSection />
         <JobCardCarousel />
 
