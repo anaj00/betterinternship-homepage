@@ -1,15 +1,15 @@
 export default function Newsletter() {
   return (
-    <div className="w-full p-12 backdrop-blur-md rounded-2xl text-white bg-primary transition-shadow duration-300 shadow-[0_0_30px_var(--color-primary)]">
-      <h2 className="text-5xl font-bold text-white mb-2">
+    <div className="w-full p-6 sm:p-12 backdrop-blur-md rounded-2xl text-white bg-primary transition-shadow duration-300 shadow-[0_0_30px_var(--color-primary)]">
+      <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-2 text-justify">
         Stay ahead of your internship hunt
       </h2>
-      <p className="text-white mb-6 ">
+      <p className="text-white mb-6 text-sm sm:text-base text-justify">
         Subscribe to our newsletter for the latest internship openings, career
         tips, and application hacks—delivered weekly.
       </p>
 
-      <div className="flex gap-4">
+      <div className="flex flex-col sm:flex-row gap-4">
         {/* Input */}
         <div className="relative w-full">
           <label htmlFor="email" className="sr-only">
@@ -34,7 +34,7 @@ export default function Newsletter() {
           <input
             type="email"
             id="email"
-            className="block w-full py-3 pl-12 pr-4 text-base rounded-2xl border border-gray-300 bg-gray-50 shadow-sm focus:ring-[var(--color-green)] focus:border-[var(--color-green)] placeholder-gray-500"
+            className="block w-full py-3 pl-12 pr-4 text-sm sm:text-base rounded-2xl border border-gray-300 bg-gray-50 shadow-sm focus:ring-[var(--color-green)] focus:border-[var(--color-green)] placeholder-gray-500"
             placeholder="Enter your email to get internship updates"
           />
         </div>
@@ -42,7 +42,7 @@ export default function Newsletter() {
         {/* Button */}
         <button
           type="submit"
-          className="bg-white text-primary font-semibold px-6 py-3 rounded-xl hover:brightness-105 active:scale-95 transition-all shadow-sm min-w-[110px]"
+          className="bg-white text-primary font-semibold px-6 py-3 rounded-xl hover:brightness-105 active:scale-95 transition-all shadow-sm min-w-full sm:min-w-[110px]"
         >
           Let’s go
         </button>

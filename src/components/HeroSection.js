@@ -36,7 +36,7 @@ export default function HeroSection() {
         </div>
 
         {/* Scroll Down Indicator */}
-        {/* <div className="mt-20 animate-bounce text-gray-400">
+        <div className="mt-20 animate-bounce text-gray-400">
           <svg
             className="w-6 h-6"
             fill="none"
@@ -50,7 +50,7 @@ export default function HeroSection() {
               d="M19 9l-7 7-7-7"
             />
           </svg>
-        </div> */}
+        </div>
       </section>
     </div>
   );

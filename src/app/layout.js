@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <body>
         <Providers>
           <HeroNavbar />
-          <main className="pt-4 px-6">{children}</main>
+          <main className="pt-0 px-0 sm:px-6 sm:pt-4">{children}</main>
         </Providers>
       </body>
     </html>
