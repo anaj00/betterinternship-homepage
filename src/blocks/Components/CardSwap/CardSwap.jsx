@@ -14,13 +14,36 @@ import React, {
 } from "react";
 import gsap from "gsap";
 
-export const Card = forwardRef(({ customClass, ...rest }, ref) => (
+export const Card = forwardRef(({ customClass, children, ...rest }, ref) => (
   <div
     ref={ref}
     {...rest}
-    className={`absolute top-1/2 left-1/2 rounded-xl border border-white bg-black [transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] ${customClass ?? ""} ${rest.className ?? ""}`.trim()}
-  />
+    className={`absolute top-1/2 left-1/2 rounded-xl bg-white text-black shadow-xl [transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] overflow-hidden ${
+      customClass ?? ""
+    } ${rest.className ?? ""}`.trim()}
+  >
+    {/* Header section */}
+    <div className="bg-white p-4 rounded-t-xl">
+      {children?.props?.header ?? (
+        <h3 className="text-pink-600 font-semibold text-sm">Job Title</h3>
+      )}
+      <p className="text-xs text-gray-500">
+        {children?.props?.location ?? "Remote"}
+      </p>
+    </div>
+
+    {/* Content section */}
+    <div className="bg-black text-white p-4 h-full">
+      {children?.props?.content ?? (
+        <>
+          <p className="text-sm font-medium">San Francisco, California</p>
+          <p className="text-green-500 font-bold text-sm">$134K/year</p>
+        </>
+      )}
+    </div>
+  </div>
 ));
+
 Card.displayName = "Card";
 
 const makeSlot = (i, distX, distY, total) => ({

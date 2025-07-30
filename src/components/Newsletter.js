@@ -1,14 +1,23 @@
-import { Card } from "flowbite-react";
-
 export default function Newsletter() {
   return (
-    <Card className="border w-full max-w-sm !bg-white bg-opacity-80 backdrop-blur-lg shadow-lg rounded-2xl p-6">
-      <h5 className="text-xl font-bold">Subsribe to the newlestter</h5>
-      <p className=" mt-2">Let the job find you</p>
-      
-      <button className="mt-6 bg-black text-white px-4 py-2 rounded-full">
-        View Job
-      </button>
-    </Card>
+    <div className="max-w-md w-full p-6 bg-white/80 backdrop-blur-md rounded-2xl shadow-md">
+      <h2 className="text-3xl font-bold text-black mb-2">
+        Transforming the Way you Find Jobs
+      </h2>
+      <p className="text-gray-700 mb-6">
+        Stop searching, start discovering. Let the ideal job come to you.
+      </p>
+
+      <div className="flex items-center bg-white border border-gray-300 rounded-full overflow-hidden shadow-sm">
+        <input
+          type="email"
+          placeholder="Enter your mail"
+          className="flex-1 px-4 py-3 text-sm focus:outline-none"
+        />
+        <button className="bg-black text-white font-medium px-6 py-3 rounded-full hover:scale-105 transition">
+          Subscribe
+        </button>
+      </div>
+    </div>
   );
 }
