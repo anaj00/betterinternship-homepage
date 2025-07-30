@@ -32,7 +32,7 @@ export default function HeroSection() {
           </div>
 
           <HeroSearch />
-          {/* <HeroCompanies /> */}
+          <HeroCompanies />
         </div>
 
         {/* Scroll Down Indicator */}
