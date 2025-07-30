@@ -1,6 +1,18 @@
+const { heroui } = require("@heroui/theme");
+const flowbitePlugin = require("flowbite/plugin");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+
+    // HeroUI-specific files
+    "./node_modules/@heroui/theme/dist/components/(input|form).js",
+
+    // Flowbite components
+    "./node_modules/flowbite-react/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -47,5 +59,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [heroui(), flowbitePlugin],
 };
