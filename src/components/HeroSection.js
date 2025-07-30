@@ -26,13 +26,14 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* <div className="mt-32 gap-8 space-y-5">
-          <div className="text-gray-500 text-xl">
+        <div className="mt-16 sm:mt-24 md:mt-32 space-y-5">
+          <div className="text-gray-500 text-base sm:text-lg md:text-xl text-center px-4 sm:px-0">
             One profile. One click. We handle the rest.
           </div>
-          <HeroSearch />
-          <HeroCompanies />
-        </div> */}
+
+          {/* <HeroSearch />
+          <HeroCompanies /> */}
+        </div>
 
         {/* Scroll Down Indicator */}
         {/* <div className="mt-20 animate-bounce text-gray-400">
