@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <div className="relative w-full static-grid">
       {/* Radial fade overlay */}
-      <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0)_0%,_white_100%)]" />
+      <div className="absolute inset-0 z-0 pointer-events-none blur-lg bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.05)_0%,_rgba(255,255,255,0.2)_60%,_rgba(255,255,255,1)_100%)]" />
 
       {/* Content */}
       <section className="min-h-[calc(100vh-200px)] flex flex-col items-center text-center relative z-10 mt-8">
@@ -20,12 +20,15 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="mt-32 gap-8">
+        <div className="mt-32 gap-8 space-y-5">
+          <div className="text-gray-500 text-xl">
+            One profile. One click. We handle the rest.
+          </div>
           <HeroSearch />
           <HeroCompanies />
         </div>
 
-        {/* ↓ Scroll Down Indicator */}
+        {/* Scroll Down Indicator */}
         <div className="mt-20 animate-bounce text-gray-400">
           <svg
             className="w-6 h-6"
