@@ -13,7 +13,12 @@ export default function HeroIllustration() {
           key={index}
           src={img.src}
           alt={img.alt}
-          className={`w-28 sm:w-36 md:w-44 animate-float ${img.delay}`}
+          className={`
+            w-24 sm:w-32 md:w-40
+            animate-float
+            ${img.delay}
+            ${index > 1 ? "hidden sm:block" : ""}
+          `}
         />
       ))}
     </div>
