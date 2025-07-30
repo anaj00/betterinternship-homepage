@@ -18,7 +18,7 @@ export function HeroNavbar() {
     {
       name: "Internships",
       link: "#features",
-    }
+    },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,17 +29,34 @@ export function HeroNavbar() {
         {/* Desktop Navigation */}
         <NavBody>
           <div className="flex items-center gap-2">
-            <div className="relative w-11 h-11">
-              <Image src="/logo-only.png" alt="Logo" fill />
+            <div className="group flex items-center gap-2 cursor-pointer">
+              <div className="relative w-11 h-11">
+                <Image
+                  src="/logo-only.png"
+                  alt="Logo"
+                  fill
+                  className="object-contain transition duration-200 group-hover:brightness-75"
+                />
+              </div>
+
+              <div className="flex-col">
+                <div className="font-medium text-2xl -mb-3 transition duration-200 group-hover:text-primary">
+                  Better
+                </div>
+                <div className="font-semibold text-2xl transition duration-200 group-hover:text-primary">
+                  Internship
+                </div>
+              </div>
             </div>
 
-            <div className="flex-col">
-              <div className="font-medium text-2xl -mb-3">Better</div>
-              <div className="font-semibold text-2xl">Internship</div>
-            </div>
+            <a
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-600 dark:text-neutral-300 ml-6 text-medium hover:text-black transition duration-200 cursor-pointer hover:underline hover:transition"
+            >
+              <span className="block">Internships</span>
+            </a>
           </div>
 
-          <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             {/* Login Button - gray */}
             <button
@@ -62,7 +79,16 @@ export function HeroNavbar() {
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
-            <NavbarLogo />
+            <div className="flex items-center gap-2">
+              <div className="relative w-11 h-11">
+                <Image src="/logo-only.png" alt="Logo" fill />
+              </div>
+
+              <div className="flex-col">
+                <div className="font-medium text-2xl -mb-3">Better</div>
+                <div className="font-semibold text-2xl">Internship</div>
+              </div>
+            </div>
             <MobileNavToggle
               isOpen={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -84,20 +110,18 @@ export function HeroNavbar() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4">
-              <NavbarButton
+              <a
                 onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
+                className="relative text-neutral-600 dark:text-neutral-300"
               >
-                Login
-              </NavbarButton>
-              <NavbarButton
+                <span className="block">Log in</span>
+              </a>
+              <a
                 onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
+                className="relative text-neutral-600 dark:text-neutral-300"
               >
-                Book a call
-              </NavbarButton>
+                <span className="block">Sign up</span>
+              </a>
             </div>
           </MobileNavMenu>
         </MobileNav>
