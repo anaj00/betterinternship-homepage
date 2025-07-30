@@ -10,12 +10,15 @@ export default function HeroSection() {
       <HeroIllustration />
       <div className="relative">
         <HeroHeadline />
-        <div className="absolute right-[-60px] -top-[-120px]">
+        <div className="absolute right-[-60px] -top-[-110px]">
           <HeroTag />
         </div>
       </div>
-      <HeroSearch />
-      <HeroCompanies />
+
+      <div className="flex flex-col mt-32 gap-8">
+        <HeroSearch />
+        <HeroCompanies />
+      </div>
     </section>
   );
 }

@@ -30,11 +30,7 @@ export function HeroNavbar() {
         <NavBody>
           <div className="flex items-center gap-2">
             <div className="relative w-11 h-11">
-              <Image
-                src="/logo-only.png"
-                alt="Logo"
-                fill
-              />
+              <Image src="/logo-only.png" alt="Logo" fill />
             </div>
 
             <div className="flex-col">
@@ -45,8 +41,21 @@ export function HeroNavbar() {
 
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="outline">Login</NavbarButton>
-            <NavbarButton variant="primary">Sign up</NavbarButton>
+            {/* Login Button - gray */}
+            <button
+              type="button"
+              className="text-gray-500 hover:text-white border border-[var(--color-gray)] hover:bg-[var(--color-gray)] focus:ring-4 focus:outline-none focus:ring-[var(--color-gray)] font-medium rounded-lg text-sm px-5 py-2 text-center"
+            >
+              Login
+            </button>
+
+            {/* Sign Up Button - pink */}
+            <button
+              type="button"
+              className="text-[var(--color-pink)] hover:text-white border border-[var(--color-pink)] hover:bg-[var(--color-pink)] focus:ring-4 focus:outline-none focus:ring-[var(--color-pink)] font-medium rounded-lg text-sm px-5 py-2 text-center"
+            >
+              Sign up
+            </button>
           </div>
         </NavBody>
 
