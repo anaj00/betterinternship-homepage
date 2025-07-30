@@ -7,65 +7,98 @@ import "swiper/css/autoplay";
 
 const jobCards = [
   {
-    company: "Grab",
+    company: "Alaska",
+    logo: "/logos/alaska.png",
+    role: "Marketing Intern",
+    location: "Makati, PH",
+    rating: 4.6,
     description:
-      "Grab is a Southeast Asian technology company that offers a variety of services. Working at Grab has been an exhilarating journey.",
-    tags: [
-      "UX Strategy",
-      "Technology Solutions",
-      "Operations",
-      "Advertising",
-      "Business Development",
-    ],
+      "Alaska Milk Corporation is a leading dairy company in the Philippines, committed to providing quality nutrition for Filipino families.",
+    tags: ["Marketing", "Product Development", "Supply Chain"],
   },
   {
-    company: "Upwork",
+    company: "Jollibee",
+    logo: "/logos/jollibee.png",
+    role: "Brand Associate",
+    location: "Ortigas, PH",
+    rating: 4.8,
     description:
-      "Upwork is one of the largest freelance platforms, connecting freelancers with businesses across the globe.",
-    tags: ["Empowered Work", "Freelance Autonomy", "Remote Collaboration"],
+      "Jollibee is the largest fast-food chain in the Philippines, known for bringing joy through food and strong Filipino values.",
+    tags: ["Operations", "Branding", "Customer Experience"],
   },
   {
-    company: "Spotify",
+    company: "Manulife",
+    logo: "/logos/manulife.png",
+    role: "Tech Intern",
+    location: "Taguig, PH",
+    rating: 4.5,
     description:
-      "Spotify is a global audio streaming service. It’s where creators and listeners connect, grow, and vibe.",
-    tags: ["Audio", "Backend", "Growth", "Product Design"],
+      "Manulife is a global financial services group helping people make decisions easier and lives better through insurance and investments.",
+    tags: ["Finance", "Technology", "Customer Solutions"],
   },
   {
-    company: "Tokopedia",
+    company: "Oracle",
+    logo: "/logos/oracle.png",
+    role: "Software Engineering Intern",
+    location: "Remote",
+    rating: 4.7,
     description:
-      "Tokopedia is a leading Indonesian e-commerce platform that enables individuals and businesses to open and manage online stores.",
-    tags: ["UX Research", "Infra", "Growth", "Community"],
+      "Oracle is a multinational technology company specializing in database software, cloud engineering, and enterprise solutions.",
+    tags: ["Cloud", "AI/ML", "Database", "Software Engineering"],
   },
   {
-    company: "Tokopedia",
+    company: "Alaska",
+    logo: "/logos/alaska.png",
+    role: "Marketing Intern",
+    location: "Makati, PH",
+    rating: 4.6,
     description:
-      "Tokopedia is a leading Indonesian e-commerce platform that enables individuals and businesses to open and manage online stores.",
-    tags: ["UX Research", "Infra", "Growth", "Community"],
+      "Alaska Milk Corporation is a leading dairy company in the Philippines, committed to providing quality nutrition for Filipino families.",
+    tags: ["Marketing", "Product Development", "Supply Chain"],
   },
   {
-    company: "Tokopedia",
+    company: "Jollibee",
+    logo: "/logos/jollibee.png",
+    role: "Brand Associate",
+    location: "Ortigas, PH",
+    rating: 4.8,
     description:
-      "Tokopedia is a leading Indonesian e-commerce platform that enables individuals and businesses to open and manage online stores.",
-    tags: ["UX Research", "Infra", "Growth", "Community"],
+      "Jollibee is the largest fast-food chain in the Philippines, known for bringing joy through food and strong Filipino values.",
+    tags: ["Operations", "Branding", "Customer Experience"],
+  },
+  {
+    company: "Manulife",
+    logo: "/logos/manulife.png",
+    role: "Tech Intern",
+    location: "Taguig, PH",
+    rating: 4.5,
+    description:
+      "Manulife is a global financial services group helping people make decisions easier and lives better through insurance and investments.",
+    tags: ["Finance", "Technology", "Customer Solutions"],
+  },
+  {
+    company: "Oracle",
+    logo: "/logos/oracle.png",
+    role: "Software Engineering Intern",
+    location: "Remote",
+    rating: 4.7,
+    description:
+      "Oracle is a multinational technology company specializing in database software, cloud engineering, and enterprise solutions.",
+    tags: ["Cloud", "AI/ML", "Database", "Software Engineering"],
   },
 ];
 
-const tagColors = [
-  "bg-[#FF9AA2]",
-  "bg-[#FFDAC1]",
-  "bg-[#E2F0CB]",
-  "bg-[#B5EAD7]",
-  "bg-[#C7CEEA]",
-  "bg-[#F3D1F4]",
-  "bg-[#FFD6E0]",
-];
+
+
+const tagColors = ["bg-pink", "bg-blue", "bg-green"];
+
 
 export default function JobCardCarousel() {
   return (
-    <section className="px-4 py-16">
-      <div className="rounded-[3rem] bg-gradient-to-b from-[var(--color-primary)] to-white p-6 sm:p-12">
-        <div className="text-center text-[2.2rem] sm:text-[3rem] font-bold mb-12 text-white drop-shadow-sm">
-          Best Companies for Employees 2024
+    <section className="py-16">
+      <div className="rounded-[3rem] border border-gray-300 p-10 sm:p-12">
+        <div className="text-center text-[2.2rem] sm:text-[3rem] font-bold mb-12 text-gray-700 drop-shadow-sm">
+          Apply fast, <span className="text-primary">Get hired faster.</span>
         </div>
 
         <Swiper
@@ -86,15 +119,27 @@ export default function JobCardCarousel() {
         >
           {jobCards.map((card, index) => (
             <SwiperSlide key={index} className="!w-auto py-5">
-              <div className="w-full max-w-sm bg-white backdrop-blur-md rounded-3xl p-6 border border-gray-200 shadow-md transition duration-300 hover:shadow-xl">
-                <h5 className="text-xl font-bold mb-2">{card.company}</h5>
-                <p className="text-gray-700 text-sm">{card.description}</p>
+              <div className="w-full max-w-sm backdrop-blur-md rounded-3xl p-10 border border-gray-200 shadow-md transition duration-300 hover:shadow-xl">
+                <img
+                  src={card.logo}
+                  alt={`${card.company} logo`}
+                  className="w-25 h-25 object-contain mb-4"
+                />
+                <h5 className="text-2xl font-bold mb-2">{card.company}</h5>
+
+                <p className="text-sm text-gray-500 mb-2">
+                  {card.role} • {card.location}
+                </p>
+
+                <p className="text-gray-600 text-sm text-justify">
+                  {card.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {card.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className={`px-3 py-1 text-sm rounded-full text-black font-medium ${
+                      className={`px-3 py-1 text-sm rounded-full text-white font-medium ${
                         tagColors[i % tagColors.length]
                       }`}
                     >
@@ -112,7 +157,7 @@ export default function JobCardCarousel() {
         </Swiper>
 
         <div className="mt-10 flex justify-center">
-          <button className="text-black text-sm font-medium border border-black px-6 py-2 rounded-full hover:bg-black hover:text-white transition">
+          <button className="text-gray-600 text-sm font-medium border border border-gray-600 px-6 py-2 rounded-full hover:bg-black hover:text-white transition">
             Show More
           </button>
         </div>
