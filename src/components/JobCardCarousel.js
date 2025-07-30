@@ -50,7 +50,7 @@ const jobCards = [
 
 function JobCard({ card }) {
   return (
-    <div className="relative w-[calc(100dvw-32px)] sm:w-full bg-white text-gray-800 border border-gray-300 rounded-3xl p-8 backdrop-blur-md shadow-md transition duration-300 transform hover:scale-[1.02] hover:border-pink-300 hover:shadow-[0_0_20px_rgba(221,100,184,0.3)]">
+    <div className="relative w-[calc(100dvw-32px)] sm:w-sm bg-white text-gray-800 border border-gray-300 rounded-3xl p-8 backdrop-blur-md shadow-md transition duration-300 transform hover:scale-[1.02] hover:border-pink-300 hover:shadow-[0_0_20px_rgba(221,100,184,0.3)]">
       {card.location === "Remote" && (
         <div className="absolute top-4 right-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full shadow-sm">
           Remote
