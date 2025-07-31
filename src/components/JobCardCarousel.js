@@ -47,11 +47,41 @@ const jobCards = [
       "Oracle is a multinational technology company specializing in database software, cloud engineering, and enterprise solutions.",
     tags: ["Cloud", "AI/ML", "Database", "Software Engineering"],
   },
+  {
+    company: "Jollibee",
+    logo: "/logos/jollibee.png",
+    role: "Brand Associate",
+    location: "Ortigas, PH",
+    rating: 4.8,
+    description:
+      "Jollibee is the largest fast-food chain in the Philippines, known for bringing joy through food and strong Filipino values.",
+    tags: ["Operations", "Branding", "Customer Experience"],
+  },
+  {
+    company: "Manulife",
+    logo: "/logos/manulife.png",
+    role: "Tech Intern",
+    location: "Taguig, PH",
+    rating: 4.5,
+    description:
+      "Manulife is a global financial services group helping people make decisions easier and lives better through insurance and investments.",
+    tags: ["Finance", "Technology", "Customer Solutions"],
+  },
+  {
+    company: "Oracle",
+    logo: "/logos/oracle.png",
+    role: "Software Engineering Intern",
+    location: "Remote",
+    rating: 4.7,
+    description:
+      "Oracle is a multinational technology company specializing in database software, cloud engineering, and enterprise solutions.",
+    tags: ["Cloud", "AI/ML", "Database", "Software Engineering"],
+  },
 ];
 
 function JobCard({ card }) {
   return (
-    <div className="relative w-[calc(100dvw-32px)] sm:w-sm bg-white text-gray-800 border border-gray-300 rounded-3xl p-8 backdrop-blur-md shadow-md transition duration-300 transform hover:scale-[1.02] hover:border-pink-300 hover:shadow-[0_0_20px_rgba(221,100,184,0.3)]">
+    <div className="relative w-full max-w-[340px] sm:max-w-[370px] md:max-w-[340px] lg:max-w-[320px] xl:max-w-[300px] bg-white text-gray-800 border border-gray-300 rounded-3xl p-8 backdrop-blur-md shadow-md transition duration-300 transform hover:scale-[1.02] hover:border-pink-300 hover:shadow-[0_0_20px_rgba(221,100,184,0.3)] mx-auto">
       {card.location === "Remote" && (
         <div className="absolute top-4 right-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full shadow-sm">
           Remote
@@ -61,10 +91,10 @@ function JobCard({ card }) {
       <img
         src={card.logo}
         alt={`${card.company} logo`}
-        className="w-20 h-20 object-contain mb-4"
+        className="w-28 h-16 object-contain mb-4 mx-auto"
       />
 
-      <h5 className="text-2xl font-bold mb-1">{card.company}</h5>
+      <h5 className="text-xl font-bold mb-1">{card.company}</h5>
       <p className="text-sm text-gray-500 mb-2">
         {card.role} • {card.location}
       </p>
@@ -89,9 +119,12 @@ function JobCard({ card }) {
         <span className="text-gray-500 ml-1">({card.rating})</span>
       </div>
 
-      <button className="mt-6 bg-black text-white font-semibold px-5 py-2 rounded-full hover:scale-105 transition">
-        View Job
-      </button>
+      {/* View Job Button */}
+      <div className="flex justify-end">
+        <button className="mt-6 bg-black text-white font-semibold px-5 py-2 rounded-full hover:scale-105 transition">
+          View Job
+        </button>
+      </div>
     </div>
   );
 }
@@ -133,16 +166,17 @@ export default function JobCardCarousel() {
         {/* Mobile carousel: visible only on mobile */}
         <div className="block md:hidden">
           <Swiper
-            className="w-dvw"
-            spaceBetween={12}
+            className="mx-auto max-w-xs"
+            spaceBetween={0}
             slidesPerView={1}
+            centeredSlides={true}
             grabCursor={true}
             loop={true}
             modules={[Autoplay]}
             autoplay={{ delay: 2600, disableOnInteraction: false }}
           >
             {jobCards.map((card, index) => (
-              <SwiperSlide key={index} className="!w-auto py-4">
+              <SwiperSlide key={index} className="flex justify-center">
                 <JobCard card={card} />
               </SwiperSlide>
             ))}

@@ -9,7 +9,7 @@ export default function Home() {
     <div className="min-h-screen grid place-items-center p-8 pb-20 gap-16 sm:p-20">
       <main className="w-full flex flex-col items-center gap-8 mt-20">
         <HeroSection />
-        <div className="w-[calc(100dvw-30dvw)] md:w-auto">
+        <div className="w-[calc(100dvw-10dvw)] md:w-[calc(100dvw-10dvw)]">
           <JobCardCarousel />
         </div>
 
